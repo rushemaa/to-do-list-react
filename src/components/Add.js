@@ -11,8 +11,7 @@ export default function Add(description) {
     completed: false,
     index: newIndex,
   });
-  description.value = '';
-
+  document.getElementById('new-item').value = '';
   if (descriptionData !== '') {
     const dataTolocal = JSON.stringify(tasks);
     localStorage.setItem('lists', dataTolocal);

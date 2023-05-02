@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import Add from './Add';
 import arrowReapeat from '../assets/arrow-repeat.svg';
 import { Lists } from './Get-list';
-import { useState } from 'react';
 
 export default function Header() {
   const localLists = [];
@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <>
       <li key={343} className="li-header">
-        <h2>Today's To Do </h2>
+        <h2>Today&apos;s To Do </h2>
         <img className="right-icons-h" alt="to do lists" src={arrowReapeat} />
       </li>
       <li key={344} className="add-input">

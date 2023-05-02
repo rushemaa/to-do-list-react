@@ -7,7 +7,7 @@ function App() {
       <h1>To do list</h1>
       <ul id="to-do-list">
         <Header />
-        <span className="ul"></span>
+        <span className="ul" />
         <li className="btn-clear">
           <button type="button">Clear all completed</button>
         </li>

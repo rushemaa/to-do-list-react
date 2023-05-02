@@ -5,7 +5,10 @@ export function Display(data) {
   return (
     <div>
       <input className="checkboxs" type="checkbox" value={completed} />
-      <textarea id={index}>{description} </textarea>
+      <textarea id={index}>
+        {description}
+        {' '}
+      </textarea>
     </div>
   );
 }
@@ -15,15 +18,13 @@ export function Lists() {
   if (localStorage.getItem('lists')) {
     localLists.push(...JSON.parse(localStorage.getItem('lists')));
   }
-  return localLists.map(({ description, completed, index }) => {
-    return (
-      <li key={index} className="tasks">
-        <div>
-          <input className="checkboxs" type="checkbox" value={completed} />
-          <textarea id={index} onChange={() => {}} value={description} />
-          <img alt="three-dot" className="right-icons" src={threeDots} />
-        </div>
-      </li>
-    );
-  });
+  return localLists.map(({ description, completed, index }) => (
+    <li key={index} className="tasks">
+      <div>
+        <input className="checkboxs" type="checkbox" value={completed} />
+        <textarea id={index} onChange={() => {}} value={description} />
+        <img alt="three-dot" className="right-icons" src={threeDots} />
+      </div>
+    </li>
+  ));
 }
